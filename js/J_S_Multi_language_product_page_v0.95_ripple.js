@@ -455,7 +455,7 @@ function detectUserLang(){
       default:
             chg_productlang(1);
         break;
-    } else {
+    } else if {
           var lang_code_current = getCookie("lang_code");
         chg_productlang(lang_code_current);
       }
