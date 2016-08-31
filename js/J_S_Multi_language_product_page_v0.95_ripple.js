@@ -76,7 +76,7 @@ function SwitchFromTabCode(){
       if(temp[1]!=null){
 
         changeBSTab(tabcode);
-        changeNavBarUIWording(lang_index);
+        //changeNavBarUIWording(lang_index);
 
       }
 
@@ -147,31 +147,7 @@ function changeNavBarUIWording(lang_index){
   return;
 }
 
-//設定cookie的function
-function setCookie(cookieName, cookieValue, exdays) {
-  if (document.cookie.indexOf(cookieName) >= 0) {
-    var expD = new Date();
-    expD.setTime(expD.getTime() + (-1*24*60*60*1000));
-    var uexpires = "expires="+expD.toUTCString();
-    document.cookie = cookieName + "=" + cookieValue + "; " + uexpires+"; "+ 'path=/';
-  }
-  var d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  var expires = "expires="+d.toUTCString();
-  document.cookie = cookieName + "=" + cookieValue + "; " + expires+"; "+ 'path=/';
-}
 
-// 讀取cookie
-function getCookie(cookieName) {
-  var name = cookieName + "=";
-  var ca = document.cookie.split(';');
-  for(var i=0; i<ca.length; i++) {
-      var c = ca[i];
-      while (c.charAt(0)==' ') c = c.substring(1);
-      if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
-  }
-  return "";
-}
 
 
 
@@ -427,40 +403,69 @@ function changeAllProductPagesUIWording(arr,lang_index){
 
 function detectUserLang(){
 
-  var IsforceChangeLang_index= getCookie('forceChangeLang_index');
-
-  console.log("before detectUserLang, we get cookie- forceChangeLang_index:");
-  console.log("forceChangeLang_index="+IsforceChangeLang_index);
-  if (IsforceChangeLang_index!=1){
-
-
+    var IsforceChangeLang_index= getCookie('forceChangeLang_index');
     var tempLang = window.navigator.userLanguage || window.navigator.language ;
     var currentBrowserLang = tempLang.toLowerCase();
-    console.log(currentBrowserLang);
 
+  if (IsforceChangeLang_index!=1){
     switch (currentBrowserLang) {
       case "zh-tw":
             chg_productlang(0);
+            autolang_index=0;
         break;
       case "zh-cn":
             chg_productlang(0);
+            autolang_index=0;
         break;
       case "zh-hk":
             chg_productlang(0);
+            autolang_index=0;
         break;
       case "ja":
             chg_productlang(1);
+            autolang_index=1;
         break;
 
       default:
             chg_productlang(1);
+            autolang_index=1;
         break;
-    } else if {
-          var lang_code_current = getCookie("lang_code");
-        chg_productlang(lang_code_current);
-      }
+    }
 
+    setCookie('lang_code',autolang_index,'365');
+
+  } else {
+    var Previous_Lang_index= getCookie('lang_code');
+    auto_chg_lang(Previous_Lang_index);
   }
+}
+
+
+
+//設定cookie的function
+function setCookie(cookieName, cookieValue, exdays) {
+  if (document.cookie.indexOf(cookieName) >= 0) {
+    var expD = new Date();
+    expD.setTime(expD.getTime() + (-1*24*60*60*1000));
+    var uexpires = "expires="+expD.toUTCString();
+    document.cookie = cookieName + "=" + cookieValue + "; " + uexpires+"; "+ 'path=/';
+  }
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cookieName + "=" + cookieValue + "; " + expires+"; "+ 'path=/';
+}
+
+// 讀取cookie
+function getCookie(cookieName) {
+  var name = cookieName + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0; i<ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1);
+      if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+  }
+  return "";
 }
 
 
