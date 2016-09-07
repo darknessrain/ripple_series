@@ -1,5 +1,5 @@
 [
-    {
+   {
       "lang_title": "歡迎來到EQL - Ripple",
       "lang_navlink1": "特色",
       "lang_navlink2": "產品<b class=\"caret\"></b>",
@@ -15,6 +15,7 @@
       "lang_navlink12": "APP",
       "lang_navcht": "TW - 繁體中文",
       "lang_naveng": "EN - 英文",
+      "lang_navshop": "線上商店",
       "lang_smarthomeseries": "Ripple - 智慧家庭系列",
       "lang_smarthomeseries_cont": "Power up your lifestyle with all the brilliant features",
       "lang_ripple_icon_cont": "操作簡單",
@@ -56,8 +57,8 @@
       "lang_goodnight_cont2": "溫度過高時, WEATHER會通知PLUG開啟連接的電扇, 炎炎夏日也好眠",
       "lang_app_tl": "Ripple APP",
       "lang_app_cont": "控制, 狀態, 排程及設定互動連結"
-    },
-    {
+   },
+   {
       "lang_title": "EQL - Ripple",
       "lang_navlink1": "Intro",
       "lang_navlink2": "Products<b class=\"caret\"></b>",
@@ -73,6 +74,7 @@
       "lang_navlink12": "APP",
       "lang_navcht": "TW - Traditional Chinese",
       "lang_naveng": "EN - English",
+      "lang_navshop": "Online Shop",
       "lang_smarthomeseries": "Ripple - Smart Home Series",
       "lang_smarthomeseries_cont": "Power up your lifestyle with all the brilliant features",
       "lang_ripple_icon_cont": "Easy to set up",
@@ -114,8 +116,8 @@
       "lang_goodnight_cont2": "If it gets hot, WEATHER will tell PLUG to turn on the fan, you won’t wake up in the middle of night.",
       "lang_app_tl": "Ripple APP",
       "lang_app_cont": "Control, Status, Scheduling and Setting Events"
-    },
-    {
+   },
+   {
       "lang_title": "EQL - Ripple",
       "lang_navlink1": "Intro",
       "lang_navlink2": "Products<b class=\"caret\"></b>",
@@ -172,5 +174,5 @@
       "lang_goodnight_cont2": "If it gets hot, Ripple WEATHER will tell PLUG to turn on the connected fan, you don’t need to wake up in the middle of night.",
       "lang_app_tl": "APP",
       "lang_app_cont": "Control, Status, Scheduling and Setting Events"
-    }
+   }
 ]
