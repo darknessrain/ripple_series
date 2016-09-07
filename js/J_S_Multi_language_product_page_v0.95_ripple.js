@@ -28,6 +28,9 @@ function chg_productlang(lang_index){
 // 切換語系
 function auto_chg_lang(lang_index){
 
+  //寫入Cookie
+  setCookie('lang_code',lang_index,'365');
+  var xck= getCookie('lang_code');
 
   //更改Navbar文件
   console.log("start Change Product Lanuange by Dropdown");
